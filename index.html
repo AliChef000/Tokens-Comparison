@@ -64,14 +64,14 @@ query($dateFormat:String!)
 )
   {
     
- 		 EPS:  count(uniq:callers,smartContractAddress:{in:[
+EPS:  count(uniq:callers,smartContractAddress:{in:[
 "0x160CAed03795365F3A589f10C379FfA7d75d4E76",
 "0xcce949De564fE60e7f96C85e55177F8B9E4CF61b",
 "0x4076CC26EFeE47825917D0feC3A79d0bB9a6bB5c",
 "0x604348a7e98113E14c318605C458fBfB3B0Dd3f6",
 "0x60a8AD8470189033789c1053B0c6F89eB27Bca18"]}
 )
-    DODO:count(uniq:callers,smartContractAddress:{in:[
+DODO:count(uniq:callers,smartContractAddress:{in:[
 "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
 "0xe6df05ce8c8301223373cf5b969afcb1498c5528",
 "0xbe60d4c4250438344bec816ec2dec99925deb4c7",
@@ -92,7 +92,7 @@ query($dateFormat:String!)
 "0x750475824cf199fef0af5fcb761ac0beba75e5b1",
 "0xe3c58d202d4047ba227e437b79871d51982deeb7"
 ]})
-    Pancake:count(uniq:callers,smartContractAddress:{in:[
+Pancake:count(uniq:callers,smartContractAddress:{in:[
 "0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F",
 "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
 "0xa527a61703d82139f8a06bc30097cc9caa2df5a6",
@@ -205,7 +205,8 @@ query($dateFormat:String!)
 "0x970858016c963b780e06f7dcfdef8e809919bce8",
 "0xc2eed0f5a0dc28cfa895084bc0a9b8b8279ae492",
 "0xd937fb9e6e47f3805981453bfb277a49fffe04d7",
-"0x3da30727ed0626b78c212e81b37b97a8ef8a25bb"]})
+"0x3da30727ed0626b78c212e81b37b97a8ef8a25bb"
+]})
 Beefy:count(uniq:callers,smartContractAddress:{in:[
 "0xB0BDBB9E507dBF55f4aC1ef6ADa3E216202e06FD",
 "0x0dc06716bc1efdb5affd1308302fd45dbc31d09a",
@@ -304,7 +305,8 @@ Beefy:count(uniq:callers,smartContractAddress:{in:[
 "0x23293b8a7c65af396bda8ff75e02c62f6db8f202",
 "0x4480a061130c56b58e8fa9adec5bbbb9609122db",
 "0xe2231d4ca4921cb35680bac714c9d40c8d217494",
-"0x3b6c7bc3be5c60c875cf415a97e6539cc28eca32"]})
+"0x3b6c7bc3be5c60c875cf415a97e6539cc28eca32"
+]})
 Venus:count(uniq:callers,smartContractAddress:{in:[
 "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
 "0x2fF3d0F6990a40261c66E1ff2017aCBc282EB6d0",
@@ -406,12 +408,14 @@ Dego:count(uniq:callers,smartContractAddress:{in:[
 "0x2f436ccd422c9aabadbbafdd91574b562f3a625b",
 "0xd0ccd2e103fda6a7d2f501190ecd878b64744cce",
 "0x1bb1ba015de8f1e352ef83b3478ef3b0998aca4f",
-"0x4c00e84c2b34660dc5262e7d7be6d5c3bb0cbf0b"]})
-    Burger:count(uniq:callers,smartContractAddress:{in:[
-  "0xae9269f27437f0fcbc232d39ec814844a51d6b8f",
+"0x4c00e84c2b34660dc5262e7d7be6d5c3bb0cbf0b"
+]})
+Burger:count(uniq:callers,smartContractAddress:{in:[
+"0xae9269f27437f0fcbc232d39ec814844a51d6b8f",
 "0xbf6527834dbb89cdc97a79fcd62e6c08b19f8ec0",
-"0x3becd05231bbba6f7adda92f3c79fb3aa96d943b"]})
-    Lina:count(uniq:callers,smartContractAddress:{in:[
+"0x3becd05231bbba6f7adda92f3c79fb3aa96d943b"
+]})
+Lina:count(uniq:callers,smartContractAddress:{in:[
 "0x23e8a70534308a4aaf76fb8c32ec13d17a3bd89e",
 "0x762539b45a1dcce3d36d080f74d1aed37844b878",
 "0xf6a9bafbc505a4bc25888dc6aeac57184eb2685b",
@@ -422,8 +426,9 @@ BTCST:count(uniq:callers,smartContractAddress:{in:[
 "0xe4ae305ebe1abe663f261bc00534067c80ad677c",
 "0x78650b139471520656b9e7aa7a5e9276814a38e9",
 "0x5767a0b83f7b94ee5b9a8f5addadcb9023156f88",
-"0x216944baf1182e49252223e78b783fe7d5a02223"]})
-    Bake:count(uniq:callers,smartContractAddress:{in:[
+"0x216944baf1182e49252223e78b783fe7d5a02223"
+]})
+Bake:count(uniq:callers,smartContractAddress:{in:[
 "0xe627f00d5a5bfce0640e771af573c41e9a278a20",
 "0x20ec291bb8459b6145317e7126532ce7ece5056f",
 "0x4a2a35d0d259ecd344fab05adeb9c72389adf2d8",
