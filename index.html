@@ -58,6 +58,7 @@
     theme: 'light'
   });
   var query = new widgets.query(`
+query($dateFormat:String!)
 {ethereum(network:bsc){
   smartContractCalls (date:{since:"2021-03-23"}
 )
@@ -74,7 +75,7 @@
     Lina:count(uniq:callers,smartContractAddress:{is:"0x762539b45a1dcce3d36d080f74d1aed37844b878"})
     Sparta:count(uniq:callers,smartContractAddress:{is:"0xe4ae305ebe1abe663f261bc00534067c80ad677c"})
     
-    date{date}
+    date:date{date(format:$dateFormat)}
     
   }
 }}
@@ -189,7 +190,7 @@
     "dataOptions": [{
         title: {
           label: "Date",
-          type: "datetime",
+          type: "date",
         },
         path: "date.date",
       },
@@ -236,7 +237,7 @@
       },
     ]
   });
-  query.request({});
+  query.request({dateFormat:"%Y-%m-%d"});
 })();
 
   </script>
