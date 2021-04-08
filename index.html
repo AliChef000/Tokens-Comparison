@@ -188,7 +188,10 @@ query($dateFormat:String!)
 "0xc2eed0f5a0dc28cfa895084bc0a9b8b8279ae492",
 "0xd937fb9e6e47f3805981453bfb277a49fffe04d7",
 "0x3da30727ed0626b78c212e81b37b97a8ef8a25bb"]})
-    Beefy:count(uniq:callers,smartContractAddress:{is:"0xB0BDBB9E507dBF55f4aC1ef6ADa3E216202e06FD"})
+    Beefy:count(uniq:callers,smartContractAddress:{in:[
+"0xB0BDBB9E507dBF55f4aC1ef6ADa3E216202e06FD",
+"0x0dc06716bc1efdb5affd1308302fd45dbc31d09a",
+"0xCa3F508B8e4Dd382eE878A314789373D80A5190A"]})
     Venus:count(uniq:callers,smartContractAddress:{is:"0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63"})
     AUTO:count(uniq:callers,smartContractAddress:{is:"0xa184088a740c695e156f91f5cc086a06bb78b827"})
     Dego:count(uniq:callers,smartContractAddress:{is:"0x3fda9383a84c05ec8f7630fe10adf1fac13241cc"})
