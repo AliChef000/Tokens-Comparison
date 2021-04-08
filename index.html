@@ -212,8 +212,12 @@ query($dateFormat:String!)
 "0xf91d58b5aE142DAcC749f58A49FCBac340Cb0343",
 "0x9A0AF7FDb2065Ce470D72664DE73cAE409dA28Ec"
 ]})
-    AUTO:count(uniq:callers,smartContractAddress:{is:"0xa184088a740c695e156f91f5cc086a06bb78b827"})
-    Dego:count(uniq:callers,smartContractAddress:{is:"0x3fda9383a84c05ec8f7630fe10adf1fac13241cc"})
+    AUTO:count(uniq:callers,smartContractAddress:{in:[
+"0xa184088a740c695e156f91f5cc086a06bb78b827",
+"0x0895196562C7868C5Be92459FaE7f877ED450452"]})
+    Dego:count(uniq:callers,smartContractAddress:{in:[
+"0x3fda9383a84c05ec8f7630fe10adf1fac13241cc",
+"0xea6dec98e137a87f78495a8386f7a137408f7722"]})
     Burger:count(uniq:callers,smartContractAddress:{is:"0xae9269f27437f0fcbc232d39ec814844a51d6b8f"})
     Lina:count(uniq:callers,smartContractAddress:{is:"0x762539b45a1dcce3d36d080f74d1aed37844b878"})
     Sparta:count(uniq:callers,smartContractAddress:{is:"0xe4ae305ebe1abe663f261bc00534067c80ad677c"})
@@ -241,7 +245,7 @@ query($dateFormat:String!)
           "color": "#ffc107",
           "barWidth": "2",
           "pointsVisible": true,
-          "pointShape": "round",
+          "pointShape": "diamond",
           "pointSize": "3",
           "targetAxisIndex": 0,
           "type": "line"
