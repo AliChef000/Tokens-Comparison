@@ -60,17 +60,38 @@
   var query = new widgets.query(`
 query($dateFormat:String!)
 {ethereum(network:bsc){
-  smartContractCalls (date:{since:"2021-03-23"}
-)
+  smartContractCalls
   {
-    
-EPS:  count(uniq:callers,smartContractAddress:{in:[
-"0x160CAed03795365F3A589f10C379FfA7d75d4E76",
-"0xcce949De564fE60e7f96C85e55177F8B9E4CF61b",
-"0x4076CC26EFeE47825917D0feC3A79d0bB9a6bB5c",
-"0x604348a7e98113E14c318605C458fBfB3B0Dd3f6",
-"0x60a8AD8470189033789c1053B0c6F89eB27Bca18"]}
-)
+Matcha:count(uniq:callers,smartContractAddress:{is:"0xdef1c0ded9bec7f1a1670819833240f027b25eff"}) 
+
+MDEX:count(uniq:callers,smartContractAddress:{in:[
+"0xc48fe252aa631017df253578b1405ea399728a50",
+"0x62c1dec1ff328dcdc157ae0068bb21af3967acd9",
+"0x9c65ab58d8d978db963e63f2bfb7121627e3a739",
+"0x340192d37d95fb609874b1db6145ed26d1e47744",
+"0x4fb8253432fb3e92109c91e3ff2b85ffa0f6a1f4",
+"0xc0ba2569e473974e9004ceeeae76aeaea521525c",
+"0x93175e7c47a12e7303e0b1f4277343ef7ee070a5",
+"0x9f4da89774570e27170873befd139a79cb1a3da2",
+"0x7dae51bd3e3376b8c7c4900e9107f12be3af1ba8"]})
+
+inch:count(uniq:callers,smartContractAddress:{in:[
+"0x48ccf96b2980244f3adea52ac368ed134b56a455",
+"0x5d0ec1f843c1233d304b96dbde0cab9ec04d71ef",
+"0xf08c154e76db9c9c54a5cb8ec36c968c95f55772",
+"0x0000000000004946c0e9f43f4dee607b0ef1fa1c",
+"0x11111112542d85b3ef69ae05771c2dccff4faa26",
+"0x111111254bf8547e7183e4bbfc36199f3cedf4a1",
+"0xdaf66c0b7e8e2fc76b15b07ad25ee58e04a66796",
+"0xc33876129a6ac1022d316ac824f8eab58c7d303b",
+"0x73f0a6927a3c04e679074e70dfb9105f453e799d",
+"0x162f0e6a02cce6055d8cea2f350a96cf7a1b6141",
+"0xd41b24bba51fac0e4827b6f94c0d6ddeb183cd64",
+"0x06783bbef1770ca264b208e84ee03a4367ee7387",
+"0xf93913c1f912466c31ddddae39b3db07d6f66ac9",
+"0x111111111117dc0aa78b770fa6a738034120c302"
+]})
+
 DODO:count(uniq:callers,smartContractAddress:{in:[
 "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
 "0xe6df05ce8c8301223373cf5b969afcb1498c5528",
@@ -92,121 +113,8 @@ DODO:count(uniq:callers,smartContractAddress:{in:[
 "0x750475824cf199fef0af5fcb761ac0beba75e5b1",
 "0xe3c58d202d4047ba227e437b79871d51982deeb7"
 ]})
-Pancake:count(uniq:callers,smartContractAddress:{in:[
-"0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F",
-"0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
-"0xa527a61703d82139f8a06bc30097cc9caa2df5a6",
-"0xbd1ec00b0d1cca9d5b28fbe0bb7d664238af2ffa",
-"0x5a805994a2e30ac710e7376ccc0211285bd4dd92",
-"0x17f0b998b81ce75074a7cdadae6d63da3cb23572",
-"0x155645cdf8e4b28d5b7790b65d9f79efc222740c",
-"0xb5f6f7dad23132d40d778085d795bd0fd4b859cd",
-"0x8fbcbd7e30b1733965a8980bf7ae2ca1c0c456cc",
-"0x8c5cffad6cddb96ee33da685d0d50a37e030e115",
-"0xcd14855150335aae984aa6d281e090c27035c692",
-"0xc746337b5f800a0e19ed4eb3bda03ff1401b8167",
-"0x889e81d25bffba437b2a5d3e0e4fc58a0e2749c5",
-"0x10f461ceac7a17f59e249954db0784d42eff5db5",
-"0xe1e33459505bb3763843a426f7fd9933418184ae",
-"0x85644fcd00c401e1a0a0a10d2ae6bbe04a73e4ab",
-"0xf64a269f0a06da07d23f43c1deb217101ee6bee7",
-"0x2562f94e90de6d9eb4fb6b3b8eab56b15aa4fc72",
-"0xb7918560273fd56e50e9c215cc0dfe8d764c36c5",
-"0xd132d2c24f29ee8abb64a66559d1b7aa627bd7fd",
-"0xd20e0bcca8b29409bf5726cb24dd779fe337020e",
-"0x7b1e440240b220244761c9d9a3b07fba1995bd84",
-"0x7bb89460599dbf32ee3aa50798bbceae2a5f7f6a",
-"0xe022baa3e5e87658f789c9132b10d7425fd3a389",
-"0xfec200a5e3addd4a7915a556dde3f5850e644020",
-"0x0f556f4e47513d1a19be456a9af778d7e1a226b9",
-"0xca01f5d89d5b1d24ca5d6ecc856d21e8a61dafcc",
-"0xad7e515409e5a7d516411a85acc88c5e993f570a",
-"0x83b92d283cd279ff2e057bd86a95bdefffed6faa",
-"0xbf36959939982d0d34b37fb3f3425da9676c13a3",
-"0x45a9e8d48bc560416008d122c9437927fed50e7d",
-"0x69ab367bc1bea1d2c0fb4dbaec6b7197951da56c",
-"0xab97952a2806d5c92b7046c7ab13a72a87e0097b",
-"0x4db28767d1527ba545ca5bbda1c96a94ed6ff242",
-"0xdc6c130299e53acd2cc2d291fa10552ca2198a6b",
-"0x292ca56ed5b3330a19037f835af4a9c0098ea6fa",
-"0x4d5aa94ce6bbb1bc4eb73207a5a5d4d052cfcd67",
-"0x36b8b28d37f93372188f2aa2507b68a5cd8b2664",
-"0x86e650350c40a5178a5d014ba37fe8556232b898",
-"0x9d8b7e4a9d53654d82f12c83448d8f92732bc761",
-"0x17580340f3daedae871a8c21d15911742ec79e0f",
-"0x9e642d174b14faea31d842dc83037c42b53236e6",
-"0x4576c456af93a37a096235e5d83f812ac9aed027",
-"0x5e3cd27f36932bc0314ac4e2510585798c34a2fc",
-"0xb5ab3996808c7e489dcdc0f1af2ab212ae0059af",
-"0xc1800c29cf91954357cd0bf3f0accaada3d0109c",
-"0x0392957571f28037607c14832d16f8b653edd472",
-"0xcbe2cf3bd012e9c1ade2ee4d41db3dac763e78f3",
-"0x99d865ed50d2c32c1493896810fa386c1ce81d91",
-"0xeb325a8ea1c5abf40c7ceaf645596c1f943d0948",
-"0x60bb03d1010b99ceadd0dd209b64bc8bd83da161",
-"0x66b9e1eac8a81f3752f7f3a5e95de460688a17ee",
-"0x74690f829fec83ea424ee1f1654041b2491a7be9",
-"0x3ef4952c7a9afbe374ea02d1bf5ed5a0015b7716",
-"0xd1f12370b2ba1c79838337648f820a87edf5e1e6",
-"0xc92dc34665c8a21f98e1e38474580b61b4f3e1b9",
-"0x852a68181f789ae6d1da3df101740a59a071004f",
-"0xf609ade3846981825776068a8ed7746470029d1f",
-"0xd5664d2d15cdffd597515f1c0d945c6c1d3bf85b",
-"0xffb9e2d5ce4378f1a89b29bf53f80804cc078102",
-"0x36b7d2e5c7877392fb17f9219efad56f3d794700",
-"0x6411310c07d8c48730172146fd6f31fa84034a8b",
-"0x91589786d36fee5b27a5539cfe638a5fc9834665",
-"0xbc765fd113c5bdb2ebc25f711191b56bb8690aec",
-"0x680dd100e4b394bda26a59dd5c119a391e747d18",
-"0x3ab77e40340ab084c3e23be8e5a6f7afed9d41dc",
-"0x20781bc3701c5309ac75291f5d09bdc23d7b7fa8",
-"0x01ecc44ddd2d104f44d2aa1a2bd9dfbc91ae8275",
-"0xbe14f3a89a4f7f279af9d99554cf12e8c29db921",
-"0x64373608f2e93ea97ad4d8ca2cce6b2575db2f55",
-"0xd6b900d5308356317299dafe303e661271aa12f1",
-"0xd5b3ebf1a85d32c73a82b40f75e1cd929caf4029",
-"0x58b58cab6c5cf158f63a2390b817710826d116d0",
-"0x470bc451810b312bbb1256f96b0895d95ea659b1",
-"0x51a2ffa5b7de506f9a22549e48b33f6cf0d9030e",
-"0x9c4f6a5050cf863e67a402e8b377973b4e3372c1",
-"0xbea35584b9a88107102abef0bdee2c4fae5d8c31",
-"0xff17ff314925dff772b71abdff2782bc913b3575",
-"0xc743dc05f03d25e1af8ec5f8228f4bd25513c8d0",
-"0x9f40e8a2fcaa267a0c374b6c661e0b372264cc3d",
-"0x1b96b92314c44b159149f7e0303511fb2fc4774f",
-"0xba51d1ab95756ca4eab8737ecd450cd8f05384cf",
-"0xc639187ef82271d8f517de6feae4faf5b517533c",
-"0xbcd62661a6b1ded703585d3af7d7649ef4dcdb5c",
-"0x981d2ba1b298888408d342c39c2ab92e8991691e",
-"0xaebe45e3a03b734c68e5557ae04bfc76917b4686",
-"0xc15fa3e22c912a276550f3e5fe3b0deb87b55acd",
-"0x610e7a287c27dffcac0f0a94f547cc1b770cf483",
-"0x41182c32f854dd97ba0e0b1816022e0acb2fc0bb",
-"0x70d8929d04b60af4fb9b58713ebcf18765ade422",
-"0x7561eee90e24f3b348e1087a005f78b4c8453524",
-"0x4e0f3385d932f7179dee045369286ffa6b03d887",
-"0x20bcc3b8a0091ddac2d0bc30f68e6cbb97de59cd",
-"0xc7b4b32a3be2cb6572a1c9959401f832ce47a6d2",
-"0x2333c77fc0b2875c11409cdcd3c75d42d402e834",
-"0x574a978c2d0d36d707a05e459466c7a1054f1210",
-"0x56c77d59e82f33c712f919d09fceddf49660a829",
-"0x5acac332f0f49c8badc7afd0134ad19d3db972e6",
-"0x54edd846db17f43b6e43296134ecd96284671e81",
-"0x68ff2ca47d27db5ac0b5c46587645835dd51d3c1",
-"0x4269e7f43a63cea1ad7707be565a94a9189967e9",
-"0x35fe9787f0ebf2a200bac413d3030cf62d312774",
-"0x7a34bd64d18e44cfde3ef4b81b87baf3eb3315b6",
-"0x30479874f9320a62bce3bc0e315c920e1d73e278",
-"0x752e713fb70e3fa1ac08bcf34485f14a986956c4",
-"0x7793870484647a7278907498ec504879d6971eab",
-"0x7cd05f8b960ba071fdf69c750c0e5a57c8366500",
-"0x745c4fd226e169d6da959283275a8e0ecdd7f312",
-"0x2730bf486d658838464a4ef077880998d944252d",
-"0x970858016c963b780e06f7dcfdef8e809919bce8",
-"0xc2eed0f5a0dc28cfa895084bc0a9b8b8279ae492",
-"0xd937fb9e6e47f3805981453bfb277a49fffe04d7",
-"0x3da30727ed0626b78c212e81b37b97a8ef8a25bb"
-]})
+
+
 Beefy:count(uniq:callers,smartContractAddress:{in:[
 "0xB0BDBB9E507dBF55f4aC1ef6ADa3E216202e06FD",
 "0x0dc06716bc1efdb5affd1308302fd45dbc31d09a",
@@ -307,6 +215,7 @@ Beefy:count(uniq:callers,smartContractAddress:{in:[
 "0xe2231d4ca4921cb35680bac714c9d40c8d217494",
 "0x3b6c7bc3be5c60c875cf415a97e6539cc28eca32"
 ]})
+
 Venus:count(uniq:callers,smartContractAddress:{in:[
 "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
 "0x2fF3d0F6990a40261c66E1ff2017aCBc282EB6d0",
@@ -330,6 +239,7 @@ Venus:count(uniq:callers,smartContractAddress:{in:[
 "0xfd36e2c2a6789db23113685031d7f16329158384",
 "0x0667eed0a0aab930af74a3dfedd263a73994f216"
 ]})
+
 AUTO:count(uniq:callers,smartContractAddress:{in:[
 "0x28579eca0a326e53340edd93e18698d379876a04",
 "0x0895196562c7868c5be92459fae7f877ed450452",
@@ -396,38 +306,7 @@ AUTO:count(uniq:callers,smartContractAddress:{in:[
 "0x34d75a6238a706e8bae480d9ebd296e5d31582df",
 "0x3b78afed73a18f7c3400b18edaa765d7dfbf6dcc"
 ]})
-Dego:count(uniq:callers,smartContractAddress:{in:[
-"0xea6dec98e137a87f78495a8386f7a137408f7722",
-"0x8b7dc6e5f3c0a7d8278c4900f548711bde365528",
-"0x4cde5683f5f5616a8919a1d487552f2454c47a33",
-"0x4cedaeaf3bc1139ad691d519895167cccc6bfc16",
-"0x05b72c835c7619383d370b5e28c3aafb40270ab2",
-"0x3fda9383a84c05ec8f7630fe10adf1fac13241cc",
-"0xe5c0c004abf5585dcacf95893c5866cf59f59b9c",
-"0x36633b70eac3d1c98a20a6ecef6033d1077372f5",
-"0x2f436ccd422c9aabadbbafdd91574b562f3a625b",
-"0xd0ccd2e103fda6a7d2f501190ecd878b64744cce",
-"0x1bb1ba015de8f1e352ef83b3478ef3b0998aca4f",
-"0x4c00e84c2b34660dc5262e7d7be6d5c3bb0cbf0b"
-]})
-Burger:count(uniq:callers,smartContractAddress:{in:[
-"0xae9269f27437f0fcbc232d39ec814844a51d6b8f",
-"0xbf6527834dbb89cdc97a79fcd62e6c08b19f8ec0",
-"0x3becd05231bbba6f7adda92f3c79fb3aa96d943b"
-]})
-Lina:count(uniq:callers,smartContractAddress:{in:[
-"0x23e8a70534308a4aaf76fb8c32ec13d17a3bd89e",
-"0x762539b45a1dcce3d36d080f74d1aed37844b878",
-"0xf6a9bafbc505a4bc25888dc6aeac57184eb2685b",
-"0x4b1356cf2068030924dbd8fca1144afbe847af5f"
-]})
-Sparta:count(uniq:callers,smartContractAddress:{is:"0xe4ae305ebe1abe663f261bc00534067c80ad677c"})
-BTCST:count(uniq:callers,smartContractAddress:{in:[
-"0xe4ae305ebe1abe663f261bc00534067c80ad677c",
-"0x78650b139471520656b9e7aa7a5e9276814a38e9",
-"0x5767a0b83f7b94ee5b9a8f5addadcb9023156f88",
-"0x216944baf1182e49252223e78b783fe7d5a02223"
-]})
+
 Bake:count(uniq:callers,smartContractAddress:{in:[
 "0xe627f00d5a5bfce0640e771af573c41e9a278a20",
 "0x20ec291bb8459b6145317e7126532ce7ece5056f",
@@ -586,16 +465,16 @@ Bake:count(uniq:callers,smartContractAddress:{in:[
       },
 
       {
-        "title": "Pancake Addres",
-        "path": "Pancake",
+        "title": "Matcha Addres",
+        "path": "Matcha",
       },
       {
         "title": "DoDo Address",
         "path": "DODO"
       },
        {
-        "title": "EPS Address",
-        "path": "EPS"
+        "title": "1inch Address",
+        "path": "inch"
       },
        {
         "title": "Beefy Address",
@@ -610,29 +489,14 @@ Bake:count(uniq:callers,smartContractAddress:{in:[
         "path": "AUTO"
       },
        {
-        "title": "Dego Address",
-        "path": "Dego"
-      },
-       {
-        "title": "Burger Address",
-        "path": "Burger"
-      },
-       {
-        "title": "Lina Address",
-        "path": "Lina"
-      },
-       {
-        "title": "Sparta Address",
-        "path": "Sparta"
+        "title": "MDEX Address",
+        "path": "MDEX"
       },
        {
         "title": "Bake Address",
         "path": "Bake"
       },
-       {
-        "title": "BTCST Address",
-        "path": "BTCST"
-      },
+    
     ]
   });
   query.request({dateFormat:"%Y-%m-%d"});
