@@ -63,7 +63,7 @@ query($dateFormat:String!)
    smartContractCalls(date:{since:"2021-04-01"})
   {
 Matcha:count(uniq:callers,smartContractAddress:{is:"0xdef1c0ded9bec7f1a1670819833240f027b25eff"}) 
-
+OpenOcean:count(uniq:callers,smartContractAddress:{is:"0x6679800c37e2f7eb072a7af3fb3b81b17a0af153"})
 MDEX:count(uniq:callers,smartContractAddress:{in:[
 "0xc48fe252aa631017df253578b1405ea399728a50",
 "0x62c1dec1ff328dcdc157ae0068bb21af3967acd9",
@@ -467,6 +467,10 @@ Bake:count(uniq:callers,smartContractAddress:{in:[
       {
         "title": "Matcha Addres",
         "path": "Matcha",
+      },
+      {
+        "title": "OpenOcean Address",
+        "path": "OpenOcean"
       },
       {
         "title": "DoDo Address",
